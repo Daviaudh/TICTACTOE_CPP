@@ -44,7 +44,7 @@
     bool Tictactoe::testeVictoireDiagonale(){
          for (int i = 0, i<3, i++)
         {
-            if (grilleDeJeu.getContent(i+,i)!=' ' && grilleDeJeu.getContent(i,i) == grilleDeJeu.getContent(i+1,i+1) && grilleDeJeu.getContent(i,i) == grilleDeJeu.getContent(i+2,i+2))
+            if (grilleDeJeu.getContent(i,i)!=' ' && grilleDeJeu.getContent(0,0) == grilleDeJeu.getContent(1,1) && grilleDeJeu.getContent(0,0) == grilleDeJeu.getContent(2,2))
             {
                 std:: cout << "Gagné"<<std::endl;
 
@@ -59,7 +59,10 @@
     }
 
     void Tictactoe::finTour(){
-
+        numeroTour++;
+        if(symboleCourant=='x'){
+            symboleCourant=o;
+        }
     }
 
 #endif
