@@ -10,8 +10,6 @@ int main(){
     Tictactoe jeu = Tictactoe();
     int numeroCase;
 
-    Grille maGrilleDeTest = Grille();
-    maGrilleDeTest.affiche();
 
     while(!partiegagnee && !jeu.testeJeuNul()){
         
